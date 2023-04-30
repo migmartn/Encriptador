@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="encriptador.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+	<title>Encriptador</title>
+</head>
+<body>
+	<header class="encabezado">
+		<p>Reto Alura-Oracle</p>
+		<h1 >Encriptador</h1>
+	</header>
+      <input type="text" class="text" id="texto"  placeholder="Ingresa texto" required>
+    <div class="resu" id="resultado"></div>
+    <script>
+      function ejecutar() {
+        const texto = document.getElementById('texto').value;
+        const accion = document.getElementById('accion').value;
+        let resultado;
+        if (accion === 'encriptar') {
+          resultado = encriptar(texto);
+        } else {
+          resultado = desencriptar(texto);
+        }
+        document.getElementById('resultado').textContent = resultado;
+      }
+      
+      function encriptar(palabra) {
+        let encriptada = palabra.replace(/e/g, 'enter')
+                               .replace(/i/g, 'imes')
+                               .replace(/a/g, 'ai')
+                               .replace(/o/g, 'ober')
+                               .replace(/u/g, 'ufat');
+        return encriptada;
+      }
+      
+      function desencriptar(palabraEncriptada) {
+        let desencriptada = palabraEncriptada.replace(/ufat/g, 'u')
+                                            .replace(/ober/g, 'o')
+                                            .replace(/ai/g, 'a')
+                                            .replace(/imes/g, 'i')
+                                            .replace(/enter/g, 'e');
+        return desencriptada;
+      }
+    </script>
+    <script >
+    	function copiarTexto() {
+		  var texto = document.getElementById("resultado");
+		  var seleccion = document.createRange();
+		  seleccion.selectNodeContents(texto);
+		  window.getSelection().removeAllRanges();
+		  window.getSelection().addRange(seleccion);
+		  document.execCommand("copy");
+		  alert("El texto se ha copiado al portapapeles");
+}
+    </script>
+    <div class="navegacion">
+    	<label class="menu" for="accion">Accion:</label>
+      <select class="selector" id="accion">
+        <option value="encriptar">Encriptar</option>
+        <option value="desencriptar">Desencriptar</option>
+      </select>
+      <br>
+      <button class="ejecut" type="button" onclick="ejecutar()"> <img src="C:\Users\Miguel\Documents\Carpeta\cursos\oracleone\ProyectoEncriptador\ejecutar.png" height ="30" width="30"></button>
+      <button class="cop" onclick="copiarTexto()"> <img class="imagen" src="C:\Users\Miguel\Documents\Carpeta\cursos\oracleone\ProyectoEncriptador\copiar.png" height ="30" width="30"></button>
+    </div>
+    <footer class="men">
+     <h1 class="infdes">Informacion del desarrollador</h1>
+    	<div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="migmart1234" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://mx.linkedin.com/in/migmart1234?trk=profile-badge">Miguel Nieves</a></div>
+      <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    </footer>
+</body>
+</html>

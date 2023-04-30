@@ -1,0 +1,102 @@
+body{
+	background: url(fotter.jpg);
+   font-family: 'Bruno Ace SC', cursive;
+}
+.encabezado{
+	background-color: #1d1a1a;
+	text-align: center;
+	
+	font-size: 50px;
+	color: #00ff00;
+}
+
+.text{
+	position: relative;
+	background-color: #00ff00;
+	display: inline-block;
+    width: 480px;height: 500px;
+    vertical-align: top;
+    text-align: center;
+    margin:0 0 0 35px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+}
+.text:hover{
+	background-color: #4caf50;
+	transition: 1s all;
+	cursor:pointer;
+}
+.resu{
+	position: relative;
+	background-color: #32cd32;
+	display: inline-block;
+    width: 480px;height: 500px;
+    vertical-align: top;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+}
+.navegacion{
+	position: relative;
+	display: inline-block;
+    width: 40px;height: 500px;
+    vertical-align: top;
+}
+.menu{
+	display: inline-block;
+	margin: 10px 30px;
+	padding: 10px 95px;
+	background: black;
+	color:green;
+	font-size: 20px;
+}
+.selector{
+	text-align: center;
+	background:  #7cfc00;
+	font-size: 20px;
+	width: 240px; height:50px;
+    margin: 0 0 50px 50px;
+}
+.selector:hover{
+	background: #00ff00;
+	transition: 1s all;
+	cursor: pointer;
+}
+.ejecut{
+	border:none;
+    border-radius: 5px;
+	text-align: center;
+	background: #10d518;
+  	width: 150px; height:50px;
+  	margin: 0 0 50px 110px;
+}
+.cop{
+	border:none;
+    border-radius: 5px;
+	text-align: top;
+	background: #10d518;
+	width: 150px; height:50px;
+	margin: 0 0 50px 110px;
+}
+.cop:hover{
+	background: darkgreen;
+    transform: scale(1.2);
+    transition: 1s all;
+    cursor: pointer;
+}
+.ejecut:hover{
+	background: darkgreen;
+    transform: scale(1.2);
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.men{
+	
+	padding: 50px;
+	background-color: #000000;
+	color: #000000;
+}
+.infdes{
+	color: #00ff00;
+}
+
